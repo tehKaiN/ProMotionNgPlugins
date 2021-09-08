@@ -73,7 +73,6 @@ bool tProMotion::getPaletteFromCurrentImage(std::vector<tRgb> &PaletteOut)
 
 bool tProMotion::setPaletteInCurrentImage(const std::vector<tRgb> &Palette) {
 	// https://stackoverflow.com/questions/50313607/
-	printf("0\n");
 	auto PaletteOut = Palette;
 	PaletteOut.resize(256, tRgb(0, 0, 0));
 
@@ -112,10 +111,8 @@ bool tProMotion::setPaletteInCurrentImage(const std::vector<tRgb> &Palette) {
 	}
 
 	if(!ddeQueryOk("ReceivePalette")) {
-		printf("2\n");
 		return false;
 	}
-	printf("3\n");
 	return isOk;
 }
 
