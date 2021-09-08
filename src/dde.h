@@ -1,6 +1,10 @@
 #ifndef _DDE_H_
 #define _DDE_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -13,5 +17,11 @@ bool ddeRequest(
 );
 
 bool ddeExecute(const char *szItem, const char *szCommand);
+
+bool ddeQueryOk(const char *szCommand);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // _DDE_H_

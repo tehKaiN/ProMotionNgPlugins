@@ -161,3 +161,15 @@ bool ddeExecute(const char *szItem, const char *szCommand) {
 
   return s_isDdeReady;
 }
+
+bool ddeQueryOk(const char *szCommand) {
+	if(!ddeExecute("ImageServerItem", szCommand)) {
+		return false;
+	}
+	char szResult[128];
+	ddeRequest("ImageServerItem", szResult, sizeof(szResult), false);
+	if(strcmp(szResult, "OK")) {
+		return false;
+	}
+	return true;
+}

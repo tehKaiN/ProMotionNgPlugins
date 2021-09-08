@@ -1,2 +1,2 @@
 # ProMotionNgPlugins
-A collection of Pro Motion NG Plugins
+A collection of [Pro Motion NG](https://www.cosmigo.com/) Plugins.
