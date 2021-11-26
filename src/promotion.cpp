@@ -91,9 +91,9 @@ bool tProMotion::setPaletteInCurrentImage(const std::vector<tRgb> &Palette) {
 	ZeroMemory(&BmInfo, sizeof(BmInfo));
 	BmInfo.bmiHeader = BmHeader;
 	for(auto i = 0; i < PaletteOut.size(); ++i) {
-		BmInfo.bmiColors[i].rgbBlue = PaletteOut.at(i).m_ubR;
+		BmInfo.bmiColors[i].rgbRed = PaletteOut.at(i).m_ubR;
 		BmInfo.bmiColors[i].rgbGreen = PaletteOut.at(i).m_ubG;
-		BmInfo.bmiColors[i].rgbRed = PaletteOut.at(i).m_ubB;
+		BmInfo.bmiColors[i].rgbBlue = PaletteOut.at(i).m_ubB;
 		BmInfo.bmiColors[i].rgbReserved = 0;
 	}
 
